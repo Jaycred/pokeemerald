@@ -3378,9 +3378,9 @@ static void Cmd_getexp(void)
                 gBattleMoveDamage = 0; // used for exp
             }
             */
-            // don't gain exp from foes who are more than 3 levels behind
+            // don't gain exp from foes who are more than 2 levels behind
             if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL
-                || GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) > gBattleMons[gBattlerFainted].level + 3)
+                || GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) > gBattleMons[gBattlerFainted].level + 2)
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
